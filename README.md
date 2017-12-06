@@ -27,4 +27,5 @@
 - [Note 1-1:前端和后端](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-1.md)
 - [Note 1-2:亲手搭建第一个后端-1](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-2.md)
 - [Note 1-3:亲手搭建第一个后端-2](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-3.md)
+- [Note1汇总版，方便快速学习/复习](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1_all.md)
 
