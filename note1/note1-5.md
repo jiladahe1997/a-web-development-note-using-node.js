@@ -29,3 +29,5 @@ var options = {<br/>
 res.sendFile(example.html,options); <br/><br/>
 
 最后重新访问localhost:3000 就可以看到我们新建立的example.html啦！
+
+最终的代码应该像这样：[点我](./note1-5_app.js)
