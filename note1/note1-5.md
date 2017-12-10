@@ -5,7 +5,7 @@
 - ### 第二步：
 不论你看没看我刚刚写的前端与后端渲染...，如果你看了没看懂，我表示抱歉，毕竟我的水平有限。第二步我们开始创建我们的第一个html文件，当然关于html的语法还请大家度娘找教程，这里我向大家推荐一个我个人觉得比较好的 [https://developer.mozilla.org/zh-CN/](https://developer.mozilla.org/zh-CN/)。
 
-我们的html文件应该像这里一样：[点我]（我不知道怎么在md文件中插入html...插入的html代码都被无视了！）
+我们的html文件应该像这里一样：[点我](./example.html)（我不知道怎么在md文件中插入html...插入的html代码都被无视了！）
 
 然后使用第一步中的SendFile函数，但是这个函数又怎么用呢，返回值是什么？参数我又该怎么填呢？ 还是那句话，谁的函数找谁，[http://www.expressjs.com.cn/4x/api.html#res.sendFile](http://www.expressjs.com.cn/4x/api.html#res.sendFile) <br />
 这里有个小小的难点

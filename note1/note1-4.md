@@ -38,7 +38,7 @@
 
 ###### PS:
 我个人来说更加偏爱前端渲染，这是因为后端渲染往往需要在纯html文件中加入一些其他语法，例如使用PHP：[看这里](http://www.w3school.com.cn/php/php_syntax.asp)  会在html中嵌套进php语法，我个人来说是不太喜欢这样的，因为这样又得去多学php的语法...毕竟学html+css+javascript都让我够困难了。<br/>
-因此我选择前端渲染，看起来像这样 [<div class=username> <js>//向后端获取数据，查找class=username的div，然后替换数据</javascript>] (**html代码显示不出来！后期修改的时候用图片替换一下**)
+因此我选择前端渲染，看起来像这样 ![php](./note1-4_phpExample) (**html代码显示不出来！后期修改的时候用图片替换一下**)
 
 
 
