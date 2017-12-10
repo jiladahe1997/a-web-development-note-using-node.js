@@ -27,12 +27,12 @@
 - [Note 1-1:前端和后端](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-1.md)
 - [Note 1-2:亲手搭建第一个后端-1](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-2.md)
 - [Note 1-3:亲手搭建第一个后端-2](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-3.md)
-- [Note 1-4:亲手编写第一个前端网页-1](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-3.md)
-- [Note 1-5:亲手编写第一个前端网页-2](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-3.md)
+- [Note 1-4:亲手编写第一个前端网页-1](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-4.md)
+- [Note 1-5:亲手编写第一个前端网页-2](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1-5.md)
 - [Note1汇总版，方便快速学习/复习](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note1/note1_all.md)
 
 ### Note 2:前端开发
-- [Note 2-1:CSS-为我们的第一个网页增加CSS]
+- [Note 2-1:CSS-为我们的第一个网页增加CSS](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-1.md)
 - [Note 2-2:JavaScript-为我们的第一个网页增加JavaScript]
 - [Note 2-3]:\*CSS开发总结
 - [Note 2-4]:\*js开发总结
