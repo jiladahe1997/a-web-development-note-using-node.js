@@ -1,6 +1,7 @@
 # a web development note using node.js
 
-这是一篇web全栈开发的笔记（或者说是一个小教程）。
+this is a note about web development for myself , and it may also help for someone who is beginner to web development
+这是一篇web全栈开发的笔记（或者说是一个小教程）,它也许会对那些和我一样的web开发初学者有所帮助。
 作为一个第一次接触到web开发的新手，我通过将我的一些笔记记录、整理下来，以便将来“学而时习之”。
 
 文中的内容都是很基础很浅显的，相信大家都能百度的到。
@@ -35,7 +36,7 @@
 - [Note 2-1:CSS-为我们的第一个网页增加CSS](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-1.md)
 - [Note 2-2:JavaScript-为我们的第一个网页增加JavaScript](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-2.md)
 - [Note 2-3]:\*CSS开发总结
-- [Note 2-4]:\*js开发总结
+- [Note 2-4:javascript开发总结](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-4.md)
 - [Note 2-5]:\*使用webpack"打包"我们的html,css,js文件
 - [Note 2-6]:\*使用react框架
 
