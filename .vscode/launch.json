@@ -1,0 +1,15 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "file:///F:/%E6%A1%8C%E9%9D%A2%E4%BF%9D%E6%8A%A4/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/XACKER/2017.10.18%20node.js%E5%AD%A6%E4%B9%A0/a-web-development-note-using-node.js/note2/note2-7_example.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

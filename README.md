@@ -39,6 +39,7 @@ this is a note about web development for myself , and it may also help for someo
 - [Note 2-4:javascript开发总结](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-4.md)
 - [Note 2-5]:\*使用webpack"打包"我们的html,css,js文件
 - [Note 2-6]:\*使用react框架
+- [Note 2-7:动画](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-7.md)
 
 
 ### Note 3:后端开发
