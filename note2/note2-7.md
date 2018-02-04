@@ -144,3 +144,7 @@ JavaScript实现的动画主要原理是根据时间来快速的改变CSS值，�
 ```
 
 然后当点击按钮时，只需要将class="list" => class="list list-show"（可以使用DOM接口：*document.getElementsByClassName("list")[0].classList.toogle("list-show")* ），这样就可以播放一次动画，这是非常常用的操作。
+
+## 其他
+
+【CSS动画】CSS给一个元素添加多个动画，animation : 3s 动画1 forwards , 3s 动画2 forwards;

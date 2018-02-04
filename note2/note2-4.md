@@ -21,15 +21,36 @@ document.getElementById("example").innerHTML = "hello world";   //通过DOM接�
 
 javascript的最终目的是给html赋予编程语言的特性，html只是简单的HyperText Markup Language，也就是说html只是简单的标记了文本，并没有做其他的事。而javascript正是通过DOM接口来实现目的的。
 
-### DOM接口
-DOM接口是由W3C开发并维护的接口，详细介绍：[W3C官网]()<br/>
-DOM接口只是一套html与外界接口的标准，具体的实现还跟使用的浏览器有关系，比如有些DOM接口虽然定义了，但是有些浏览器不一定去实现了;有些接口定义的方式根据浏览器也会有所不同，但是大体上说是大同小异。详情见：[MDN介绍]()
+### Web API接口
+Web API接口是由W3C开发并维护的接口，详细介绍：[W3C官网]()<br/>
+Web API接口只是一套html与外界接口的标准，具体的实现还跟使用的浏览器有关系，比如有些Web API接口虽然定义了，但是有些浏览器不一定去实现了;有些接口定义的方式根据浏览器也会有所不同，但是大体上说是大同小异。详情见：[MDN介绍]()
 
-当大家在使用DOM接口时遇到问题，例如使用EVENT的addEventListener()函数，阅读由DOM开发者-W3C 写的文档无疑比去百度或者谷歌找答案好。
+当大家在使用Web API接口时遇到问题，例如使用EVENT的addEventListener()函数，阅读由Web API开发者-W3C 写的文档无疑比去百度或者谷歌找答案好。
 
-下面是我使用DOM接口时遇到的一些新手常见问题，记录下来以备随时查看：
+下面是我使用Web API接口时遇到的一些关于Web API接口的常见问题，记录下来以备随时查看：
 
-1
+##### Document接口
+
+引用MDN上 
+>Document 接口提供了一些在浏览器服务中作为页面内容入口点而加载的一些页面，也就是 DOM 树。 DOM 树包括诸如 body 和 table 之类的元素，及其他元素。其也为文档（document）提供了全局性的函数，例如获取页面的 URL、在文档中创建新的 element 的函数。
+
+Document接口是用的非常多的接口。我们可以通过Document接口获取到html树中的任意一个元素，并将其保存为一个 **Element** 对象。例如获取id为“example”的img标签
+``` javascript
+var example = document.getElementById("example")；
+```
+
+获取到这个 **Element** 对象后，就可以进行一系列的操作：
+``` javascript
+var example = document.getElementById("example")；
+example.innerHTML = "test";        //替换example元素的所有内容为test（string）
+example.addEventListener("click",function(){alert("点击！")});  //添加单击事件
+example.classList.add("example-show");    //添加类
+```
+可以说，与HTML文档所有的交互几乎都依赖于 **Element** 对象，熟练掌握 **Element** 对象非常有用。
+>MDN上关于  **Element** 对象的详细描述 ： https://developer.mozilla.org/zh-CN/docs/Web/API/Element
+
+##### 一些常用的DOM操作
+>
 
 <br/>
 
