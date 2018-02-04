@@ -35,7 +35,7 @@ this is a note about web development for myself , and it may also help for someo
 ### Note 2:前端开发
 - [Note 2-1:CSS-为我们的第一个网页增加CSS](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-1.md)
 - [Note 2-2:JavaScript-为我们的第一个网页增加JavaScript](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-2.md)
-- [Note 2-3]:\*CSS开发总结
+- [Note 2-3:CSS开发总结](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-3.md)
 - [Note 2-4:javascript开发总结](https://github.com/jiladahe1997/a-web-development-note-using-node.js/blob/master/note2/note2-4.md)
 - [Note 2-5]:\*使用webpack"打包"我们的html,css,js文件
 - [Note 2-6]:\*使用react框架
