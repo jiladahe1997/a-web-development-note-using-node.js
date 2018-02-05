@@ -29,7 +29,7 @@ Web API接口只是一套html与外界接口的标准，具体的实现还跟使
 
 下面是我使用Web API接口时遇到的一些关于Web API接口的常见问题，记录下来以备随时查看：
 
-##### Document接口
+#### Document接口
 
 引用MDN上 
 >Document 接口提供了一些在浏览器服务中作为页面内容入口点而加载的一些页面，也就是 DOM 树。 DOM 树包括诸如 body 和 table 之类的元素，及其他元素。其也为文档（document）提供了全局性的函数，例如获取页面的 URL、在文档中创建新的 element 的函数。
@@ -52,6 +52,15 @@ example.classList.add("example-show");    //添加类
 ##### 一些常用的DOM操作
 >
 
+
+#### EVENT接口
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 
 ### javascript本身特性
@@ -102,5 +111,54 @@ function example_func(){
 document.getElementById("example").addEventListener("cilck",example_func())
 ```
 
+<br>
+<br>
 
+#### 2.JavaScript闭包
 
+JavaScript闭包是JavaScript不同于其他语言的一种特性。
+
+闭包的作用是在处理回调函数时，需要用到一些“全局的变量”，比如以下这个回调函数:
+``` javascript
+var counter = 0;
+var example = document.getElementById("example");
+example.addEventListenser("click",function(){console.log(counter++)});
+```
+
+为了避免“全局污染”，可以改成如下：
+``` javascript
+function test(){
+  var counter = 0;
+  var example = document.getElementById("example");
+  example.addEventListenser("click",function(){console.log(counter++)});
+}
+
+test();
+```
+
+如果是C语言或者其他语言，那么每次点击example元素后会都会提示“*变量不存在*”的错误出错，因为在注册完回调函数后，counter变量就会被释放。而在JavaScript中，在定义函数时就会形成闭包，counter变量将不会被释放，每次点击后输出1、2、3、4、5...
+
+#####闭包的使用
+
+闭包通常使用在回调函数中，这是因为回调函数通常会用到一些“全局变量”，比如：计数器、id等。下面是一个常用的回调操作。
+
+``` javascript
+window.onload = function(){
+  var img_data = {          //使用对象字面量创建JS对象。此对象将通过闭包作为“全局变量”使用，这个“全局变量”仅供子函数访问。
+    counter : 0,
+    order : [[1,3,5],[2,6],[4]]
+  }
+  var example = document.getElementsByClassName("example")[0];
+
+  //虽然在定义回调函数时没有实际的使用到img_data对象，只有在触发回调事件时才会触发回调函数，从而使用到img_data对象。
+  //但是闭包是在函数定义时就建立好的，因此回调才使用并不影响。
+  eaxmple.addEventListener("click",function(e){
+    for(let i=0 ; i<img_data.order[counter].length ; i++){
+      var order = img_data.order[counter][i];
+      var img = document.getElementsByClassName( "img-"+order )[0];
+
+      img.style.opacity = "1";
+    }
+  })
+}
+```
