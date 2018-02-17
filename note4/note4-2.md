@@ -53,6 +53,7 @@ HTML
         <!--这里的i标签标准应该用来表示斜体，但是通常用来表示图标(icon)-->
         <i></i>
         <ol class="dropDownMenu">
+            <!--设置一个空白的“遮挡”，使按钮和弹出菜单“无缝衔接”，融为一体-->
             <div class="dropDownMenu-headerBlank"></div>
             <span class="dropDownMenu-border">
                 <span class="dropDownMenu-title">选项：</span>
@@ -72,12 +73,7 @@ CSS
     position: relative;                 /*为absolute定位提供基础元素*/
     text-align: center;
 }
-.main:hover > .triggerButton{
-    padding: 10px;
-    border-color: #dedede;
-    border-width: 1px 1px 0 1px;
-    border-style: solid;
-}
+
 
 .main > i{      /*使用i标签表示图标，这里表示三角形图标*/
     position: relative;
@@ -91,7 +87,12 @@ CSS
 .main:hover > .dropDownMenu {
     display: block;
 }
-
+.main:hover > .triggerButton{
+    padding: 10px;
+    border-color: #dedede;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+}
 
 
 /*下拉菜单部分CSS*/
@@ -111,19 +112,19 @@ CSS
     width: 81px;
     height: 20px;
 }
-.dropDownMenu > .dropDownMenu-border{
+.dropDownMenu > .dropDownMenu-border{        /*下拉菜单的边框*/
     display: inline-block;
     padding: 20px;
     border: 1px solid #dedede;
     border-radius: 2px;
 }
 
-.dropDownMenu  .dropDownMenu-title{
+.dropDownMenu  .dropDownMenu-title{         /*菜单项间距*/
     display: inline-block;
     margin: 20px;
 }
 
-.dropDownMenu > .dropDownMenu-border > li{
+.dropDownMenu > .dropDownMenu-border > li{  /*菜单项间距*/
     margin: 10px;
 }
 ```
