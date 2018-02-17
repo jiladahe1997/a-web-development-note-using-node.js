@@ -1,0 +1,60 @@
+.main{
+    position: relative;                 /*为absolute定位提供基础元素*/
+    text-align: center;
+}
+.main:hover > .triggerButton{
+    padding: 10px;
+    border-color: #dedede;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+}
+
+.main > i{      /*使用i标签表示图标，这里表示三角形图标*/
+    position: relative;
+    top: 10px;
+    border-width: 6px;
+    border-color: #777 transparent transparent;
+    border-style: solid;
+}
+
+
+.main:hover > .dropDownMenu {
+    display: block;
+}
+
+
+
+/*下拉菜单部分CSS*/
+.dropDownMenu {
+    display: none;
+    position: absolute;         /*下拉菜单为absolute定位，防止收起时对其他元素影响*/
+    top: 10px;
+    left: 559px;
+    list-style: none;
+}
+
+.dropDownMenu > .dropDownMenu-headerBlank{  /*设置一个顶部空白遮挡，看起来更好看*/
+    position: absolute;         /*这里需要注意，absolute元素也可以为子absolute元素提供定位*/
+    left: 44px;
+    top: -4px;
+    background-color: white;
+    width: 81px;
+    height: 20px;
+}
+.dropDownMenu > .dropDownMenu-border{
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+}
+
+.dropDownMenu  .dropDownMenu-title{
+    display: inline-block;
+    margin: 20px;
+}
+
+.dropDownMenu > .dropDownMenu-border > li{
+    margin: 10px;
+}
+
+

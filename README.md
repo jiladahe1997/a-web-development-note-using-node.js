@@ -49,3 +49,4 @@ this is a note about web development for myself , and it may also help for someo
 
 ### Note 4:其他
 - [Note 4-1:ES2016、JSCOMMON的区别，require和import的区别]
+- [Note 4-2:下拉菜单、轮播组件、选项卡切换]
