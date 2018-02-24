@@ -1,6 +1,8 @@
 .main{
     position: relative;                 /*为absolute定位提供基础元素*/
     text-align: center;
+    width: 960px;
+    margin: auto;
 }
 .main:hover > .triggerButton{
     padding: 10px;
@@ -29,7 +31,7 @@
     display: none;
     position: absolute;         /*下拉菜单为absolute定位，防止收起时对其他元素影响*/
     top: 10px;
-    left: 559px;
+    left: 387px;
     list-style: none;
 }
 

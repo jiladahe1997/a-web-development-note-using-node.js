@@ -162,3 +162,70 @@ window.onload = function(){
   })
 }
 ```
+
+<br>
+<br>
+
+#### 3.JavaScript中的this
+
+>参考：https://www.cnblogs.com/pssp/p/5216085.html
+
+在类似于C++这种面向对象的编程语言中，经常会用到this。比如在c++中：
+``` c
+//C++
+class test{
+  int a;
+
+  void resetA(void){
+    this.a=0;
+  }
+}
+```
+在JavaScript中也经常见到，那么这个this到底是什么意思呢？
+``` javascript
+//JavaScript，使用对象字面量创建对象
+var test = {
+    a:"Good Morning",
+    resetA:function(){
+        console.log(this.a); 
+    }
+}
+test.resetA();
+//输出结果："Good Morning"
+//即此时this指代对象test
+
+function test(){
+    var a = "Good Morning";
+    console.log(this.a); 
+    console.log(this); 
+}
+a();
+//输出结果："undefined","Window"
+//即此时this指代默认对象window
+
+document.getElementById("test").addEventListener("click",function(){
+    console.log(this.id); 
+})
+//输出结果："test"
+//即此时this指代默认对象为getElementById("test")返回的对象
+
+
+//构造函数
+function test(){
+　　　　this.x = 1;
+　　}
+　　var o = new test();
+alert(o.x); // 1
+```
+因此，总结如下：
+>  情况1：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window。(**构造函数除外，构造函数中this还是指新构造出的对象**)<br><br>
+情况2：如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象。（**如上面第三段代码：回调函数通常由某个对象回调，this就指代这个调用对象**）<br><br>
+情况3：如果一个函数中有this，这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象，
+
+<br>
+<br>
+
+#### 4:”==“和”===“
+
+1)不同类型间比较，==之比较“转化成同一类型后的值”看“值”是否相等，===如果类型不同，其结果就是不等<br>
+2）同类型比较，直接进行“值”比较，两者结果一样  

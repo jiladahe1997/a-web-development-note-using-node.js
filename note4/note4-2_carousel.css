@@ -1,0 +1,41 @@
+.carouselMove{
+    width: 960px;
+    margin: auto;
+    overflow: hidden;
+}
+.carouselMove .carouselMove_control{
+    position: relative;
+    width: 4860px;                  /*手动设置宽度*/
+    left:0;
+    padding: 0;
+    list-style: none;
+
+    font-size: 0;                  /*这句话非常重要，因为默认inline-block元素之间会有一个空格的间距*/
+    transition: left 2s;
+}
+
+.carouselMove .carouselMove_control li{
+    display: inline-block;
+}
+
+
+/*        */
+
+.carouselChoose{
+    position: relative;
+    top: -40px;
+    width: 960px;
+    padding: 0;
+    text-align: center;
+}
+.carouselChoose li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #b9beba;
+}
+
+.carouselChoose-active{
+    background: hsla(0,0%,100%,.6);
+}
