@@ -116,9 +116,11 @@ document.getElementById("example").addEventListener("cilck",example_func())
 
 #### 2.JavaScript闭包
 
-JavaScript闭包是JavaScript不同于其他语言的一种特性。
+JavaScript闭包（closure）是JavaScript不同于其他语言的一种特性。
 
-闭包的作用是在处理回调函数时，需要用到一些“全局的变量”，比如以下这个回调函数:
+简单的来说，在JavaScript中可以进行函数嵌套，在这个过程中，子函数可以访问并维持父函数的变量。
+
+闭包在我个人使用中最明显的作用是在处理回调函数时，需要用到一些“全局的变量”，比如以下这个回调函数:
 ``` javascript
 var counter = 0;
 var example = document.getElementById("example");
@@ -137,6 +139,8 @@ test();
 ```
 
 如果是C语言或者其他语言，那么每次点击example元素后会都会提示“*变量不存在*”的错误出错，因为在注册完回调函数后，counter变量就会被释放。而在JavaScript中，在定义函数时就会形成闭包，counter变量将不会被释放，每次点击后输出1、2、3、4、5...
+
+当然我认为这是很大因为JavaScript可以进行函数的嵌套（C语言是不能进行嵌套的，回调函数只能传入那个回调函数的指针）。
 
 #####闭包的使用
 
@@ -162,6 +166,45 @@ window.onload = function(){
   })
 }
 ```
+
+#####闭包的原理
+
+>Javascript 中，每个函数都有一个与之相关联的作用域链。每次调用 JavaScript 函数的时候，都会为之创建一个新的对象用来保存局部变量，并把这个对象添加至作用域链中。当函数返回时，再将这个对象删除，此对象会被当做垃圾回收。但如果这个函数定义了嵌套的函数，并将它存储在某处的属性里，就意味着有了一个外部引用指向这个嵌套的函数。它就不会被当作垃圾回收，它所指向的变量绑定对象同样不会被回收。
+作者：天方夜
+链接：https://www.zhihu.com/question/19554716/answer/23064179
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+上面这段话中的作用域链在JavaScript中实质是一个隐藏的变量[[scopes]]，并且由于只有函数能产生作用域；链，而对象不行，因此对象没有闭包。下面以两个例子来说明这个问题：
+
+``` javascript
+function test(age){
+    this.age = age;
+    this.greeting = function(){
+        console.log("打招呼:",age);
+    }
+}
+test1 = new test(1);//实例化对象
+
+let test_Obj = {
+    age:1,
+    greeting:function(){
+        console.log(age);
+    }
+}
+
+test1.greeting();  //输出1
+test_Obj.greeting(); //输出 undefined
+```
+
+如果在vs中调试，可以分别查看两个greeting的作用域如下：
+
+![closure1](note2-4_closure1.png)
+
+![closure2](note2-4_closure2.png)
+
+因此：在对象的方法中，如果需要访问对象的变量，就需要使用this。如下面 * 3.JavaScript中的this * 中所示
+
 
 <br>
 <br>
@@ -199,7 +242,7 @@ function test(){
     console.log(this.a); 
     console.log(this); 
 }
-a();
+test();
 //输出结果："undefined","Window"
 //即此时this指代默认对象window
 
